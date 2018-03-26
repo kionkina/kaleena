@@ -1,13 +1,14 @@
 /**
-   D3 demo: transition basics
-
-   Clyde "Thluffy" Sinclair
-   SoftDev2 pd0
-   2099-12-31
+Karina Ionkina and Vivien Lee
+SoftDev2 pd07
+K #14: You Are Smarter Than the President*
+2018-03-25
  **/
 
 
 document.getElementById("change").addEventListener("click", function() {if (year == 1973) { year = 1950; makegraph();}});
+
+
 //1973
 var year = 1973
     var labels1 = ["SS, Unemployment and Labor", "Medicare and Health", "Veterans' Benefits", "Transportation", "Education Training, Employment, and Social services", "Natural Resources", "Science, space, tech", "National Defense"];
@@ -40,7 +41,7 @@ var makegraph = function(e){
 	    });
     }
 
-    barEnter.style("width", function(d) {
+    barEnter.transition().duration(5000).style("width", function(d) {
 	    return d * 4 + "px";
 	});
 };
